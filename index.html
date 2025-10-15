@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aethera Cheesecakes · Celestial Catalogue</title>
+  <meta name="description" content="Minimalist catalogue of Aethera cheesecakes: celestial desserts with a pastel blue, white, and gold ethereal aesthetic." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f9fc;
+      --surface: #ffffff;
+      --ink: #0e1a2b;
+      --ink-soft: #42526b;
+      --sky: #cfe8ff;
+      --sky-2: #e9f4ff;
+      --gold: #bfa26a;
+      --gold-2: #e7d8ac;
+      --cloud: #f2f5f9;
+      --shadow: 0 10px 30px rgba(14,26,43,.08);
+      --radius: 20px;
+      --maxw: 1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--sky-2),var(--bg) 30%, var(--surface) 100%);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    img{max-width:100%;height:auto;display:block}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:clamp(16px,3vw,28px)}
+    .header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.6);backdrop-filter:saturate(150%) blur(8px);border-bottom:1px solid rgba(14,26,43,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:38px;height:38px;border-radius:999px;background:radial-gradient(circle at 40% 35%, #fff 0 35%, var(--gold-2) 36% 38%, transparent 40%), conic-gradient(from 0deg, #fff 0 30deg, var(--gold) 31deg 60deg, #fff 61deg 360deg);box-shadow:0 0 0 2px rgba(191,162,106,.25), 0 8px 24px rgba(14,26,43,.08)}
+    .brand h1{font-family:"Playfair Display",serif;font-size:20px;letter-spacing:.5px;margin:0}
+    .pill{padding:10px 14px;border-radius:999px;border:1px solid rgba(14,26,43,.08);background:linear-gradient(180deg,#fff, #f9fbff);box-shadow:var(--shadow);font-weight:500}
+    .hero{position:relative;overflow:hidden}
+    .hero-wrap{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:clamp(18px,4vw,40px)}
+    .halo{position:absolute;inset:auto -10% -30% -10%;height:60vh;pointer-events:none;background:radial-gradient(ellipse at 50% 0%, rgba(207,232,255,.7), transparent 55%), radial-gradient(circle at 70% 30%, rgba(231,216,172,.45), transparent 45%)}
+    .headline{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,64px);line-height:1.05;margin:8px 0}
+    .sub{font-size:clamp(16px,2.2vw,18px);color:var(--ink-soft);max-width:60ch}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .btn{padding:12px 18px;border-radius:12px;border:1px solid rgba(14,26,43,.08);background:#fff;box-shadow:var(--shadow);font-weight:600}
+    .btn.primary{background:linear-gradient(180deg,#fff7e6,#fff);border-color:rgba(191,162,106,.5)}
+    .card{background:var(--surface);border:1px solid rgba(14,26,43,.06);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .grid{display:grid;gap:clamp(16px,2.4vw,24px)}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:900px){.hero-wrap{grid-template-columns:1fr}.grid.cols-3{grid-template-columns:1fr 1fr}}
+    @media (max-width:640px){.grid.cols-3{grid-template-columns:1fr}.grid.cols-2{grid-template-columns:1fr}}
+    .sec{padding:clamp(28px,5vw,60px) 0}
+    .section-title{font-family:"Playfair Display",serif;font-size:clamp(28px,3.5vw,40px);margin:0 0 10px}
+    .section-sub{color:var(--ink-soft);margin:0 0 22px}
+    .product{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:16px}
+    .media{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(180deg,var(--cloud),#fff);display:grid;place-items:center;border:1px dashed rgba(14,26,43,.1);position:relative;overflow:hidden}
+    .media small{color:var(--ink-soft)}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:linear-gradient(180deg,#fff,#f7fbff);border:1px solid rgba(14,26,43,.08);font-size:12px}
+    .price{font-weight:700}
+    .muted{color:var(--ink-soft)}
+    .toppings-list{display:flex;flex-wrap:wrap;gap:10px}
+    .how{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    @media (max-width:900px){.how{grid-template-columns:1fr}}
+    .how .step{padding:18px;border-radius:16px;border:1px solid rgba(14,26,43,.06);background:linear-gradient(180deg,#fff, #f8fbff)}
+    .footer{padding:36px 0;border-top:1px solid rgba(14,26,43,.08);background:linear-gradient(180deg,#fff,var(--cloud))}
+    .kbd{border:1px solid rgba(14,26,43,.15);border-bottom-width:3px;border-radius:10px;padding:2px 8px;font-weight:600;background:#fff}
+    @media print{
+      .header, .cta a[href^="#contact"]{display:none !important}
+      body{background:#fff}
+      .card{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Aethera Cheesecake</h1>
+      </div>
+      <nav aria-label="Main" style="display:flex;gap:14px;flex-wrap:wrap">
+        <a class="pill" href="#collection">Collection</a>
+        <a class="pill" href="#toppings">Toppings</a>
+        <a class="pill" href="#enjoy">Enjoy</a>
+        <a class="pill" href="#order">Order</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero sec">
+    <div class="container hero-wrap">
+      <div>
+        <p class="chip">✨ Celestial & Minimal</p>
+        <h2 class="headline">Heaven in a cheesecake.<br/>Light, elegant, unforgettable.</h2>
+        <p class="sub">Aethera comes from the Greek word <em>Aether</em> — the celestial substance breathed by gods. Our cheesecakes are crafted to capture that same lightness and purity.</p>
+        <div class="cta">
+          <a class="btn primary" href="#collection">Explore Collection</a>
+          <a class="btn" href="#story">Our Story</a>
+        </div>
+      </div>
+      <div class="card" style="padding:16px">
+        <figure class="media"><small>Place your main photo (Aethera Cheesecake)</small></figure>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="muted">Photo suggestion: neutral background, natural light</span>
+          <span class="chip">Top view / 45°</span>
+        </div>
+      </div>
+    </div>
+    <div class="halo"></div>
+  </section>
+
+  <section id="story" class="sec">
+    <div class="container">
+      <h3 class="section-title">The Story of Aethera</h3>
+      <p class="section-sub">We transform the everyday into something celestial. Each slice is crafted to elevate your senses through balance, calm, and light.</p>
+      <div class="grid cols-2">
+        <div class="card" style="padding:20px">
+          <p>Inspired by <strong>Aether</strong> — the pure substance that the gods breathed — we seek the most refined, elegant version of cheesecake: select ingredients, precise baking, and a minimalist finish that lets the flavor speak for itself.</p>
+          <p>The Aethera aesthetic blends <em>pastel blues, whites, and golds</em> to evoke sky and light. Less is more: clean composition, soft textures, and a golden touch reminiscent of a sunset halo.</p>
+        </div>
+        <figure class="media card"><small>Lifestyle photo suggestion: soft sky / light marble / microcement</small></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="collection" class="sec">
+    <div class="container">
+      <h3 class="section-title">Celestial Collection</h3>
+      <p class="section-sub">Four ways to experience your Aethera moment.</p>
+      <div class="grid cols-3">
+        <article class="product card">
+          <figure class="media"><small>Aethera Cheesecake Photo</small></figure>
+          <header>
+            <h4 style="margin:6px 0;font-family:'Playfair Display',serif">Aethera Cheesecake</h4>
+            <p class="muted">The original recipe — balanced, smooth, and celestial. The pure essence of Aethera.</p>
+          </header>
+          <footer style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+            <span class="price">Sizes: Individual / 20 cm / 25 cm</span>
+            <span class="chip">Best‑seller</span>
+          </footer>
+        </article>
+        <article class="product card">
+          <figure class="media"><small>Cheeselovers Photo</small></figure>
+          <header>
+            <h4 style="margin:6px 0;font-family:'Playfair Display',serif">Cheeselovers</h4>
+            <p class="muted">Rich and creamy, with an intense cheese flavor for true cheesecake lovers.</p>
+          </header>
+          <footer style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+            <span class="price">Sizes: Individual / 20 cm / 25 cm</span>
+            <span class="chip">Intense</span>
+          </footer>
+        </article>
+        <article class="product card">
+          <figure class="media"><small>Lemon Cheesecake Photo</small></figure>
+          <header>
+            <h4 style="margin:6px 0;font-family:'Playfair Display',serif">Lemon Cheesecake</h4>
+            <p class="muted">Refreshing and delicate, with bright citrus notes that awaken the senses.</p>
+          </header>
+          <footer style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+            <span class="price">Sizes: Individual / 20 cm / 25 cm</span>
+            <span class="chip">Refreshing</span>
+          </footer>
+        </article>
+        <article class="product card">
+          <figure class="media"><small>White Chocolate Cheesecake Photo</small></figure>
+          <header>
+            <h4 style="margin:6px 0;font-family:'Playfair Display',serif">White Chocolate Cheesecake</h4>
+            <p class="muted">Silky and indulgent — the sweetest way to taste heaven.</p>
+          </header>
+          <footer style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+            <span class="price">Sizes: Individual / 20 cm / 25 cm</span>
+            <span class="chip">Indulgent</span>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="toppings" class="sec">
+    <div class="container">
+      <h3 class="section-title">Toppings & Customization</h3>
+      <p class="section-sub">“Enhance your slice of heaven” — the perfect finishing touch.</p>
+      <div class="card" style="padding:20px">
+        <div class="toppings-list">
+          <span class="chip">Oreo</span>
+          <span class="chip">Lotus</span>
+          <span class="chip">Salted Caramel</span>
+          <span class="chip">Pistachio</span>
+          <span class="chip">Jam: Strawberry</span>
+          <span class="chip">Jam: Raspberry</span>
+          <span class="chip">Jam: Blueberry</span>
+        </div>
+        <p class="muted" style="margin-top:14px">Presentation tip: use half-moon or swirl patterns to maintain a minimal aesthetic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="enjoy" class="sec">
+    <div class="container">
+      <h3 class="section-title">How to Enjoy Aethera</h3>
+      <p class="section-sub">A small guide to elevate your experience.</p>
+      <div class="how">
+        <div class="step">
+          <h4>Temperature</h4>
+          <p>Serve chilled for a clean texture, or at <strong>room temperature</strong> for 15–20 minutes for extra creaminess.</p>
+        </div>
+        <div class="step">
+          <h4>Pairing</h4>
+          <p>Light coffee, white tea, or brut sparkling wine. Fresh fruit for Lemon; nuts for White Chocolate.</p>
+        </div>
+        <div class="step">
+          <h4>Occasions</h4>
+          <p>Celebrate, gift, or <em>enjoy a moment of calm</em>. Available in individual and event formats.</p>
+        </div>
+        <div class="step">
+          <h4>Storage</h4>
+          <p>Keep refrigerated. Consume within 48–72 h. Cover to preserve aroma and texture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="sec">
+    <div class="container">
+      <h3 class="section-title">Orders & Contact</h3>
+      <p class="section-sub">Order by request — premium presentation included.</p>
+      <div class="grid cols-2">
+        <div class="card" style="padding:20px">
+          <form onsubmit="event.preventDefault(); alert('Thank you! We will get back to you soon.');">
+            <div style="display:grid;gap:12px">
+              <label>Name<br><input required placeholder="Your name" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(14,26,43,.15)"></label>
+              <label>Email<br><input required type="email" placeholder="you@email.com" style="width:100%;padding:12px;border-radius:12px;border:1px solid rgba(14,26,43,.15)"></label>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
